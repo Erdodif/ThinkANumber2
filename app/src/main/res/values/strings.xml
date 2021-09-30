@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ThinkANumber</string>
+    <string name="kocka1">1 KOCKA</string>
+    <string name="kocka2">2 KOCKA</string>
+    <string name="dobas">DOBÁS</string>
+    <string name="reset">RESET</string>
+</resources>

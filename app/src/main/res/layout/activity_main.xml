@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/imageView1Kocka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kocka1"/>
+        <ImageView
+            android:id="@+id/imageView2Kocka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kocka1"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button1Kocka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/kocka1"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2Kocka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/kocka2"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonDobas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dobas"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"/>
+    <ScrollView
+        android:id="@+id/scrollView0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ScrollView>
+</LinearLayout>
