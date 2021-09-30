@@ -1,15 +1,16 @@
 package hu.petrik.thinkanumber
 
+import hu.petrik.thinkanumber.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.view.View
-import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.databinding.DataBindingUtil
-import hu.petrik.thinkanumber.databinding.ActivityMainBinding
-import java.util.*
+import android.view.ViewGroup
 import kotlin.random.Random
+import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AlertDialog
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -81,12 +82,20 @@ class MainActivity : AppCompatActivity() {
                 val kiad = "${list.get(0)}"
                 ujjView(kiad)
             } else {
-                val kiad = "${list.get(1)+list.get(0)} (${list.get(1)}+${list.get(0)})"
+                val kiad = "${list.get(1) + list.get(0)} (${list.get(1)}+${list.get(0)})"
                 ujjView(kiad)
             }
         }
         binding.buttonReset.setOnClickListener {
-            binding.scrollLayout0.removeAllViews()
+            var ask = AlertDialog.Builder(this)
+            ask.setTitle("Reset")
+            ask.setMessage("Biztos, hogy törölni szeretné az eddigi dobásokat?")
+            ask.setNegativeButton("nem") { _, _ -> }
+            ask.setPositiveButton("igen") { _, _ ->
+                binding.scrollLayout0.removeAllViews()
+                lekovet()
+            }
+            ask.show()
         }
     }
 }
