@@ -51,7 +51,13 @@
             android:id="@+id/scrollView0"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/scrollLayout0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
+            </LinearLayout>
         </ScrollView>
     </LinearLayout>
 </layout>
